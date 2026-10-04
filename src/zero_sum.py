@@ -22,8 +22,8 @@ WARNING --- "constant for the keys I tried" is not a proof. With few keys you
 may be lucky. Test with at least 50 random keys before you believe a result;
 the grader re-tests every claim with many more keys.
 """
-import os, random
-from trivium import Trivium
+import random
+
 
 def cube_sum(key_bits, cube, R):
     """
