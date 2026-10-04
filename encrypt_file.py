@@ -37,7 +37,6 @@ def decrypt_file(key: bytes, infile: str, outfile: str):
     #   2. ks = keystream(key, iv, len(cipher))
     #   3. plain = XOR of cipher and ks
     #   4. write plain to outfile
-    blob = open(infile, 'rb').read()
     iv, cipher = blob[:IV_LEN], blob[IV_LEN:]
     ks = keystream(key, iv, len(cipher))
     open(outfile, 'wb').write(bytes(a ^ b for a, b in zip(cipher, ks)))
